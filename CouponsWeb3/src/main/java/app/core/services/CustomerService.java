@@ -58,18 +58,18 @@ public class CustomerService extends ClientService {
 	}
 
 	public List<Coupon> getCustomerCoupons(int customerId) {
-		List<Coupon> coupons = customerRepo.getById(customerId).getCoupons();
+		List<Coupon> coupons = customerRepo.findById(customerId).get().getCoupons();
 		return coupons;
 	}
 
 	 public List<Coupon>getCustomerCouponsByCategory(int customerId, Category category){
 	       
-		 return couponRepo.findAllByCustomersAndCategory(customerRepo.getById(customerId), category);
+		 return couponRepo.findAllByCustomersAndCategory(customerRepo.findById(customerId).get(), category);
     }
 		
 
 	public List<Coupon> getCustomrCouponsLessThanMaxPrice(int customerId, double maxPrice) {
-		return couponRepo.findAllByCustomersAndPriceLessThan(customerRepo.getById(customerId), maxPrice);
+		return couponRepo.findAllByCustomersAndPriceLessThan(customerRepo.findById(customerId).get(), maxPrice);
 	}
 
 	public Customer customerDetails(int customerId) {

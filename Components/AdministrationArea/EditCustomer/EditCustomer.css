@@ -1,0 +1,20 @@
+.editCustomer form {
+	width: 250px;
+    height: 430px;
+    text-align: left;
+    margin: auto;
+}
+.editCustomer input, button{
+    font-size: medium;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.editCustomer h4{
+    text-align: center;
+}
+.editCustomer span{
+    position: absolute;
+    margin-left:30px;
+    color: sienna;
+}

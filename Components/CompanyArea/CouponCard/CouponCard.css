@@ -1,0 +1,17 @@
+.couponCard {
+    position: a;
+    border:  1px solid black;
+    width: fit-content;
+    height: fit-content;
+    color: #200;
+}
+
+.couponCard img{
+    margin-top: 20px;
+    width: 100px;
+    height: 75px;
+}
+.couponCard h5{
+    margin: 4%;
+}
+

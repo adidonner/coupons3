@@ -1,0 +1,20 @@
+.customersList table {
+  width: 100%;
+  }
+
+.customersList tr{
+  display: flex;
+}
+
+.customersList th {
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding: 10px;    
+}
+.customersList > a{
+  position: absolute;
+  right: 3%;
+  top: 18%;
+  text-decoration: none;
+  transform: scale(1.5);
+}

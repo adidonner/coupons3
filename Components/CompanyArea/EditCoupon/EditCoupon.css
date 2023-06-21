@@ -1,0 +1,22 @@
+.EditCoupon {
+    position: absolute;
+    top: 5%;
+	width: 250px;
+    text-align: left;
+    margin: auto;
+}
+.EditCoupon input, button, select{
+    font-size: medium;
+    box-sizing: border-box;
+    margin: 1%;
+}
+.EditCoupon h4{
+    text-align: center;
+    margin: 1%;
+}
+.EditCoupon span{
+    font-size: medium;
+    position: absolute;
+    margin-left:30px;
+    color: sienna;
+}

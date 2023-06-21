@@ -1,0 +1,7 @@
+.Login select, .Login option, .Login label, .Login button {
+	font-size: x-large;
+}
+.Login fieldset {
+	width: 100px;
+	align-self: center;
+}
