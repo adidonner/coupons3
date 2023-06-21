@@ -77,6 +77,7 @@ public class AdminService extends ClientService {
 	 */
 	public Company updateCompany(Company company) throws CompaniesException {
 		if (this.companyRepo.existsById(company.getId())) {
+			System.out.println(company.getId());
 			return this.companyRepo.save(company);
 		} else {
 			throw new CompaniesException("updateCompany failed - not found" + company.getId());

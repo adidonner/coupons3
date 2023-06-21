@@ -32,6 +32,8 @@ public class CompanyService extends ClientService {
 			Company company = companyRepo.findById(companyId)
 					.orElseThrow(() -> new CompaniesException("Company id: " + companyId + " not found"));
 			company.addCoupon(coupon);
+			companyRepo.save(company);
+//			coupon.setCompany(company);
 			return coupon;
 		} else {
 			throw new CouponsException(
@@ -39,32 +41,39 @@ public class CompanyService extends ClientService {
 		}
 	}
 
+//	public Coupon updateCoupon(Company company, Coupon coupon) throws CouponsException {
+////		getCouponById( companyId, coupon.getId());
+//		//		coupon.setCompanyId(companyId);
+//		coupon.setCompany(company);
+////		coupon.setCustomers(getCouponById(companyId, coupon.getId()).getCustomers());
+//		return couponRepo.save(coupon);
+//	}
 	public Coupon updateCoupon(int companyId, Coupon coupon) throws CouponsException {
-		coupon.setCompanyId(companyId);
+		coupon.setCompany(getCompanyDetails(companyId));
 		coupon.setCustomers(getCouponById(companyId, coupon.getId()).getCustomers());
 		return couponRepo.save(coupon);
 	}
 
 	/**
 	 * @param couponId
-	 * @return
+	 * @return coupon
 	 * @throws CouponsException if the specified coupon not exists
 	 */
 	public Coupon getCouponById(int companyId, int couponId) throws CouponsException {
 		Coupon coupon = couponRepo.findById(couponId)
 				.orElseThrow(() -> new CouponsException("Coupon Id: " + couponId + " not found "));
-		if (coupon.getCompanyId() != companyId) {
-			throw new CouponsException("This coupon does not belong to company id: " + companyId);
-		}
+//		if (coupon.getCompanyId() != companyId) {
+//			throw new CouponsException("This coupon does not belong to company id: " + companyId);
+//		}
 		return coupon;
 	}
 
 	public void deleteCouponById(int companyId, int couponId) throws CouponsException {
 		Coupon coupon = couponRepo.findById(couponId)
 				.orElseThrow(() -> new CouponsException("Coupon Id: " + couponId + " not found "));
-		if (coupon.getCompanyId() != companyId) {
-			throw new CouponsException("This coupon does not belong to company id: " + companyId);
-		}
+//		if (coupon.getCompanyId() != companyId) {
+//			throw new CouponsException("This coupon does not belong to company id: " + companyId);
+//		}
 		couponRepo.delete(coupon);
 	}
 
