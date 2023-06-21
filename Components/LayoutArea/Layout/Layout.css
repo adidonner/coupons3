@@ -1,0 +1,11 @@
+.Layout {
+	height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 5% 10% 75% 5%;
+}
+.Layout h2 , .Layout> *{
+    font-style: italic;
+    font-weight: 300;
+    
+}
