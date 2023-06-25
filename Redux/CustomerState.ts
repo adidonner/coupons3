@@ -1,5 +1,4 @@
 import { createStore } from "redux";
-import CompanyModel from "../Models/CompanyModel";
 import CouponModel from "../Models/CouponModel";
 import CustomerModel from "../Models/CustomerModel";
 
