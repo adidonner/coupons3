@@ -1,0 +1,17 @@
+.coupons li{
+	margin-left: 30%;
+	padding: 5px;
+	text-align: left;
+	font-size: larger;
+	font-weight: lighter;
+	text-indent: 10px;
+	line-height: 1.8;
+}
+.coupons input{
+	width: 100px;
+	border-bottom: 2px solid blue;
+}
+.coupons select, option{
+	width: 250px;
+	font-size: large;
+}
