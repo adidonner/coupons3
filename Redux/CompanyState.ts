@@ -3,7 +3,7 @@ import CompanyModel from "../Models/CompanyModel";
 import CouponModel from "../Models/CouponModel";
 
 export class CompanyState {
-    public company: CompanyModel[] = [];
+    public company: CompanyModel;
     public coupons: CouponModel[] = [];
 }
 
