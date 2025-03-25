@@ -1,0 +1,24 @@
+
+.addCustomer{
+    font-weight: 300;
+    position: absolute;
+    margin: 5%;
+}
+.addCustomer form{
+    width: 250px;
+    text-align: left;
+}
+.addCustomer input, button{
+    font-size: medium;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.addCustomer h4{
+    text-align: center;
+}
+.addCustomer span{
+    position: absolute;
+    margin-left:30px;
+    color: sienna;
+}
