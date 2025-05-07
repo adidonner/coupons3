@@ -1,0 +1,18 @@
+.CouponDetails img {
+    position: absolute;
+    left: 20%;
+    margin-top: 5%;
+    width: 150px;
+    height: 150px;
+}
+.CouponDetails h4 {
+    position: absolute;
+    right: 20%;
+    top: 25%;
+}
+.CouponDetails span {
+    text-decoration: underline;
+}
+.CouponDetails h5 {
+    margin: 10px;
+}

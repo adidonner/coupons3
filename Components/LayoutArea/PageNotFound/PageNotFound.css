@@ -1,0 +1,9 @@
+.PageNotFound 
+NavLink {
+   color: black;
+}
+.PageNotFound img{
+    padding: 40px;
+    border: 2px black;
+    width: 300px;
+}

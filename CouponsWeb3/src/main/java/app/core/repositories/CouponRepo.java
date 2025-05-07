@@ -20,7 +20,7 @@ public interface CouponRepo extends JpaRepository<Coupon, Integer> {
 
 	List<Coupon> findAllByCompanyIdAndPriceLessThan(int id, double maxPrice);
 
-	Optional<Coupon> findByIdAndCompanyId(int couponId, int id);
+//	Optional<Coupon> findByIdAndCompanyId(int couponId, int id);
 
 	List<Coupon> findByEndDateBefore(LocalDate now);
 

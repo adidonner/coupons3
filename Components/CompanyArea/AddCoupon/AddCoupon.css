@@ -1,0 +1,25 @@
+.addCoupon {
+    justify-self: start;
+    align-self: center;
+    text-align: left;
+    font-weight: 300;
+}
+.addCoupon form{
+    margin-top: auto;
+    width: 250px;
+}
+.addCoupon h5{
+    text-align: center;
+    margin: 0px;
+}
+.addCoupon input, select, option, button{
+    font-size: small;
+    box-sizing: border-box;
+    margin: 0;
+}
+.addCoupon span{
+    font-size: medium;
+    position: absolute;
+    margin-left:30px;
+    color: sienna;
+}

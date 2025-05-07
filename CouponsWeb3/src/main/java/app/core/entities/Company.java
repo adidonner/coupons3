@@ -1,6 +1,7 @@
 package app.core.entities;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -9,7 +10,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -23,34 +23,44 @@ import lombok.ToString;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(of = {"id"})
-@ToString(exclude = {"coupons"})
+@EqualsAndHashCode(of = { "id" })
+@ToString(exclude = { "coupons" })
 @Entity
 public class Company {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+
 	@Column(unique = true, nullable = false)
 	private String name;
 	private String email;
+
 	@Column(length = 4)
 	private String password;
-	@OneToMany( cascade = CascadeType.ALL)
-	@JoinColumn(name = "companyId")
+	private String logoImage;
+
+	@OneToMany(mappedBy = "company",
+
+			cascade = { CascadeType.DETACH, 
+						
+						CascadeType.MERGE, 
+						
+						CascadeType.PERSIST, 
+
+						CascadeType.REMOVE, 
+						
+						CascadeType.REFRESH }) 
 	@JsonIgnore
- 	private List<Coupon> coupons = new ArrayList<>();
-
-	private String logoImage; 
-
+	private List<Coupon> coupons;
 
 	public void addCoupon(Coupon coupon) {
 		if (this.coupons == null) {
 			this.coupons = new ArrayList<>();
 		}
-		coupon.setCompanyId(this.id);
+		coupon.setCompany(this);
 		coupons.add(coupon);
+
 	}
 
 }
-

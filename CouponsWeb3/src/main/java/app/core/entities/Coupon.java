@@ -7,12 +7,14 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -28,15 +30,20 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = {"id"})
-@ToString(exclude = {"companyId", "customers"} )
+@ToString(exclude = {"customers"} )
+//@ToString(exclude = {"company", "customers"} )
+//@ToString(exclude = {"companyId", "customers"} )
 @Entity
 public class Coupon {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	
+	@ManyToOne
+	@JoinColumn(name = "company_id")
+	private Company company;
 
-	private int companyId;
 	@Enumerated(EnumType.STRING)
 	private Category category;
 	@Column(unique = true, nullable = false)
