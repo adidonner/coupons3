@@ -8,7 +8,7 @@ function About(): JSX.Element {
 			<h2>guided by Bakshi Eldar </h2>
 			<h2>made by Adi Donner in his studies at  </h2>
 			<h2>John Bryce &copy; course 153 </h2>
-            <img src="https://scontent.ftlv6-1.fna.fbcdn.net/v/t1.6435-9/48393365_1924861360884733_7831172702982373376_n.png?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=5WDwOAEQdHoAX_2Dt92&_nc_ht=scontent.ftlv6-1.fna&oh=00_AfCs1aYcE7znxeJj59i5Afq-j4pGgSiaQdGowNwZ5fgnUQ&oe=646D7A12"
+            <img src="https://cdn-camp.mini-sites.net/Publish/d898ccdc817d4d4caf73c048b8c00e69/ea2c5f45033c4ded9fa60d6b35d494fa/src/contents/14b47c956f024aecadfd282a3c530621_jbh_new2021_misgeret.webp"
             alt="JB"
             height={70}
             />
